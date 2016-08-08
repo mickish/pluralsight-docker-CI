@@ -1,11 +1,12 @@
 # The deployment section should be excluded until
 # it is explicitly included in module 5
 
-#deployment:
-#  dockerhub:
-#    branch: master
-#    commands:
-#     - $DOCKER_HUB_TRIGGER
+deployment:
+  hub:
+    branch: master
+    commands:
+     - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+     - docker push mickish/pluralsight-docker-ci
 
 notify:
   webhooks:
