@@ -1,6 +1,10 @@
 # The deployment section should be excluded until
 # it is explicitly included in module 5
 
+machine:
+  services:
+  - docker
+
 deployment:
   hub:
     branch: master
